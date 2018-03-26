@@ -26,18 +26,18 @@
                     </div>
                     <%= hidden_field :meta, :slug %>
                     <div class="form-group">
-                        <%= f.label t('camaleon_cms.admin.table.title') %> <em class="text-danger">*</em><br>
+                        <%= f.label "#{@post_type.name} #{t('camaleon_cms.admin.table.title')}" %> <em class="text-danger">*</em><br>
                         <%= f.text_field :title, :class => "form-control required translatable required_all_langs title-post" %>
                     </div>
                     <% if @post.manage_content?(@post_type) %>
                         <div class="form-group">
-                            <%= f.label t('camaleon_cms.admin.sidebar.content') %> <em class="text-danger">*</em><br>
+                            <%= f.label "#{@post_type.name} #{t('camaleon_cms.admin.sidebar.content')}" %> <em class="text-danger">*</em><br>
                             <%= f.text_area :content, :class => "form-control tinymce_textarea required translatable", :height => '520px', :style => "width: 100%" %>
                         </div>
                     <% end %>
                     <% if @post.manage_summary?(@post_type) %>
                         <div class="form-group">
-                            <label for="post_summary"><%= t('camaleon_cms.admin.post_type.summary') %></label><br>
+                            <label for="post_summary"><%= "#{@post_type.name} #{t('camaleon_cms.admin.post_type.summary')}" %></label><br>
                             <textarea name="meta[summary]" id="post_summary" class="form-control translatable" cols="30" rows="5"><%= @post.get_meta("summary", "") %></textarea>
                         </div>
                     <% end %>
