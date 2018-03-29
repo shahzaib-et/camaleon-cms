@@ -45,13 +45,6 @@
                      
                     <%= _hook_args = {html: "", f: f, post: @post, post_type: @post_type}; hooks_run("post_form_custom_html", _hook_args); raw(_hook_args[:html]); %>
 
-                     <% if @post.manage_summary?(@post_type) %>
-                        <div class="form-group">
-                            <label for="post_summary"><%= "#{@post_type.name} #{t('camaleon_cms.admin.post_type.summary')}" %></label><br>
-                            <textarea name="meta[summary]" id="post_summary" class="form-control translatable" cols="30" rows="5"><%= @post.get_meta("summary", "") %></textarea>
-                        </div>
-                    <% end %>
-
                 </div>
             </div>
 
