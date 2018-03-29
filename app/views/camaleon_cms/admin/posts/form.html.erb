@@ -48,8 +48,6 @@
                 </div>
             </div>
 
-        
-
             <% unless @post.draft? || @post.new_record? %>
                 <% if @post.manage_comments?(@post_type) %>
                     <div class="panel panel-default panel-lite">
