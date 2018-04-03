@@ -15,8 +15,8 @@ module CamaleonCms::Admin::MenusHelper
           items_i << {icon: "folder-open", title: t('camaleon_cms.admin.post_type.categories'), url: cama_admin_post_type_categories_path(pt.id)} if can? :categories, pt
         end
         if pt.name == "Event"
-          items_i << {icon: "folder-open", title: "Thema 1", url: post_type_thema1_index_path } if can? :categories, pt
-          items_i << {icon: "folder-open", title: "Thema 2", url: post_type_thema2_index_path } if can? :categories, pt
+          items_i << {icon: "folder-open", title: "Thema 1", url: cama_admin_post_type_thema1_index_path } if can? :categories, pt
+          items_i << {icon: "folder-open", title: "Thema 2", url: cama_admin_post_type_thema2_index } if can? :categories, pt
           items_i << {icon: "folder-open", title: "Erlebnisart", url: post_type_type_index_path } if can? :categories, pt
         end
       end
