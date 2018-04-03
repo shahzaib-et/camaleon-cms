@@ -1,1 +1,0 @@
-thema2_controller.rb
