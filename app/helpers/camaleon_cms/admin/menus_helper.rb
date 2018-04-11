@@ -17,6 +17,7 @@ module CamaleonCms::Admin::MenusHelper
         if pt.name == "Event"
           items_i << {icon: "folder-open", title: "Thema 1", url: cama_admin_post_type_thema1_index_path(pt.id) } if can? :categories, pt
           items_i << {icon: "folder-open", title: "Thema 2", url: cama_admin_post_type_thema2_index_path(pt.id) } if can? :categories, pt
+          items_i << {icon: "folder-open", title: "Thema 3", url: cama_admin_post_type_thema3_index_path(pt.id) } if can? :categories, pt
           items_i << {icon: "folder-open", title: "Erlebnisart", url: cama_admin_post_type_type_index_path(pt.id) } if can? :categories, pt
         end
       end
