@@ -20,6 +20,9 @@ module CamaleonCms::Admin::MenusHelper
           items_i << {icon: "folder-open", title: "Thema 3", url: cama_admin_post_type_thema3_index_path(pt.id) } if can? :categories, pt
           items_i << {icon: "folder-open", title: "Erlebnisart", url: cama_admin_post_type_type_index_path(pt.id) } if can? :categories, pt
         end
+        if pt.name == "Nature Directory"
+          items_i << {icon: "folder-open", title: "Thema 1", url: cama_admin_post_type_thema1_index_path(pt.id) } if can? :categories, pt
+        end
       end
       if pt.manage_tags?
         items_i << {icon: "tags", title: t('camaleon_cms.admin.post_type.tags'), url: cama_admin_post_type_post_tags_path(pt.id)} if can? :post_tags, pt
