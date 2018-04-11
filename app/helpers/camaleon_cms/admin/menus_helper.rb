@@ -21,7 +21,7 @@ module CamaleonCms::Admin::MenusHelper
           items_i << {icon: "folder-open", title: "Erlebnisart", url: cama_admin_post_type_type_index_path(pt.id) } if can? :categories, pt
         end
         if pt.name == "Nature Directory"
-          items_i << {icon: "folder-open", title: "Thema 1", url: cama_admin_post_type_thema1_index_path(pt.id) } if can? :categories, pt
+          items_i << {icon: "folder-open", title: "Species Categories", url: cama_admin_post_type_species_category_index_path(pt.id) } if can? :categories, pt
         end
       end
       if pt.manage_tags?
